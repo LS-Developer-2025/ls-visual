@@ -16,7 +16,10 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    // A opção 'unoptimized: true' é injetada automaticamente pelo workflow do GitHub Actions.
+    // A otimização de imagens do Next.js não é compatível com `output: 'export'`.
+    // A ação `actions/configure-pages@v5` no workflow do GitHub Actions
+    // injeta `unoptimized: true` automaticamente durante o deploy.
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',

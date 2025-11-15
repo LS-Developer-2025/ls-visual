@@ -175,7 +175,7 @@ export default function BrindesPage() {
               Fale Conosco
             </button>
             <Link 
-              href="/portifolio?filter=brindes"
+              href="/portifolio#brindes"
               className="
                 bg-white/10 backdrop-blur-md border border-white/20 text-ls-branco 
                 font-bold py-4 px-10 rounded-full text-xl

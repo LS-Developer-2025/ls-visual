@@ -179,7 +179,7 @@ export default function EventosPage() {
               Fale Conosco
             </button>
             <Link 
-              href="/portifolio?filter=eventos"
+              href="/portifolio#eventos"
               className="
                 bg-white/10 backdrop-blur-md border border-white/20 text-ls-branco 
                 font-bold py-4 px-10 rounded-full text-xl
