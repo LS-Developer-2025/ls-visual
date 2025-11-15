@@ -2,16 +2,9 @@
 
 import type { NextConfig } from 'next';
 
-// --- Configuração para GitHub Pages ---
-const isProd = process.env.NODE_ENV === 'production';
-// Substitua 'site-ls' pelo nome exato do seu repositório no GitHub
-const repoName = 'site-ls'; 
-
 const nextConfig: NextConfig = {
   // Habilita a exportação estática para o GitHub Pages
   output: 'export',
-  basePath: isProd ? `/${repoName}` : '',
-  assetPrefix: isProd ? `/${repoName}/` : '',
 
   typescript: {
     ignoreBuildErrors: true,
@@ -20,8 +13,7 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    // Essencial para as imagens funcionarem no GitHub Pages
-    unoptimized: true,
+    // A opção 'unoptimized: true' é injetada automaticamente pelo workflow do GitHub Actions.
     remotePatterns: [
       {
         protocol: 'https',
@@ -33,12 +25,6 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
   },
 
-  experimental: {
-    serverActions: {
-      bodySizeLimit: '100mb',
-    },
-  },
-  
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
