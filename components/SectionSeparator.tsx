@@ -1,6 +1,6 @@
 // app/components/SectionSeparator.tsx
 import React from 'react';
-import Image from 'next/image';
+import CustomImage from '@/components/CustomImage';
 
 const SectionSeparator = () => {
   return (
@@ -8,7 +8,7 @@ const SectionSeparator = () => {
     // 2. '-my-10 md:-my-16': Margem negativa para "invadir" as seções.
     // 3. 'scale-125': A escala que você pediu.
     <div className="relative w-full -my-20 md:-my-28" aria-hidden="true">
-      <Image
+      <CustomImage
         src="/images/nuvens/n1.svg" 
         alt=""
         width={1920}

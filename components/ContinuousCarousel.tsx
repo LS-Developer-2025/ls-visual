@@ -1,7 +1,7 @@
 // components/ContinuousCarousel.tsx
 'use client'
 import React, { useRef, useEffect } from 'react'
-import Image from 'next/image'
+import CustomImage from '@/components/CustomImage'
 
 type Props = {
   images: string[]
@@ -59,7 +59,7 @@ export default function ContinuousCarousel({ images, itemClassName = '', trackHe
       >
         {content.map((src, i) => (
           <div key={i} className={`flex-shrink-0 relative ${itemClassName}`} style={{ width: '28%', minWidth: '220px' }}>
-            <Image src={src} alt={`item-${i}`} fill className="object-cover rounded-lg" />
+            <CustomImage src={src} alt={`item-${i}`} fill className="object-cover rounded-lg" />
           </div>
         ))}
       </div>

@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion'
 import CustomImage from '@/components/CustomImage'
+import { basePath } from '@/next.config'
 
 // --- DADOS DAS IMAGENS DE EVENTOS ---
 const eventosImages = [
@@ -64,7 +65,7 @@ const ImageGrid = ({ items }: { items: typeof eventosImages }) => (
         >
           {item.type === 'video' ? (
             <video
-              src={item.src}
+              src={basePath ? `${basePath}${item.src}` : item.src}
               autoPlay loop muted playsInline
               className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
             />
