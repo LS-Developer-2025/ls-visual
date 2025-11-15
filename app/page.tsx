@@ -2,9 +2,9 @@
 import { motion, Variants } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowDown } from 'lucide-react' 
-import Image from 'next/image' 
-import SectionSeparator from '../components/SectionSeparator'
-import SpotlightSeparator from '../components/SpotlightSeparator'
+import CustomImage from '@/components/CustomImage'
+import SectionSeparator from '@/components/SectionSeparator'
+import SpotlightSeparator from '@/components/SpotlightSeparator'
 
 const fadeIn: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -112,7 +112,7 @@ export default function HomePage() {
                   transition-all duration-300"
               >
                 <div className="w-full h-48 sm:h-64 overflow-hidden rounded-t-xl">
-                  <Image 
+                  <CustomImage 
                     src="/images/1.jpg" 
                     alt="Equipamentos para Eventos"
                     width={600} height={300} 
@@ -141,7 +141,7 @@ export default function HomePage() {
                   transition-all duration-300"
               >
                 <div className="w-full h-48 sm:h-64 overflow-hidden rounded-t-xl">
-                  <Image 
+                  <CustomImage 
                     src="/images/brindes/Camiseta Preta.png" 
                     alt="Brindes Personalizados"
                     width={600} height={300} 
@@ -184,7 +184,7 @@ export default function HomePage() {
           <div className="logo-carousel-track">
             {[...clientLogos, ...clientLogos].map((src, index) => (
               <div key={index} className="logo-carousel-item">
-                <Image 
+                <CustomImage 
                   src={src} 
                   alt={`Logo Cliente ${index + 1}`} 
                   width={150} height={75} 
@@ -216,7 +216,7 @@ export default function HomePage() {
             <div className="carousel-track">
               {[...portfolioImages, ...portfolioImages].map((src, index) => (
                 <motion.div key={index} className="carousel-item">
-                  <Image 
+                  <CustomImage 
                     src={src} alt={`Portfólio ${index + 1}`} fill 
                     className="
                       object-cover object-center   

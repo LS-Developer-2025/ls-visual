@@ -7,11 +7,13 @@ const isProd = process.env.NODE_ENV === 'production';
 // O nome do seu repositório. O workflow do GitHub Actions usará isso.
 const repoName = 'site-ls';
 
-const nextConfig: NextConfig = {
+const basePath = isProd ? `/${repoName}` : '';
+
+const nextConfig: NextConfig & { basePath: string } = {
   // Adiciona o nome do repositório como prefixo para assets em produção
-  assetPrefix: isProd ? `/${repoName}` : '',
+  assetPrefix: basePath,
   // Adiciona o nome do repositório como caminho base em produção
-  basePath: isProd ? `/${repoName}` : '',
+  basePath: basePath,
 
   // Habilita a exportação estática para o GitHub Pages
   output: 'export',
@@ -50,4 +52,4 @@ const nextConfig: NextConfig = {
 };
 
 
-export default nextConfig;
+export { basePath, nextConfig as default };

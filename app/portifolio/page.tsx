@@ -1,8 +1,7 @@
 'use client'
 
-import { useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import Image from 'next/image'
+import CustomImage from '@/components/CustomImage'
 
 // --- DADOS DAS IMAGENS DE EVENTOS ---
 const eventosImages = [
@@ -70,7 +69,7 @@ const ImageGrid = ({ items }: { items: typeof eventosImages }) => (
               className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
             />
           ) : (
-            <Image
+            <CustomImage
               src={item.src}
               alt={item.alt}
               fill

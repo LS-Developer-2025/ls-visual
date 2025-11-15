@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import Image from 'next/image'
+import CustomImage from '@/components/CustomImage'
 import OrcamentoModal from '../../components/OrcamentoModal'
 import { useState } from 'react'
 
@@ -101,7 +101,7 @@ export default function BrindesPage() {
           >
             {/* Imagem de Fundo com Overlay */}
             <div className="absolute inset-0 z-0">
-              <Image 
+              <CustomImage 
                 src={produto.image} 
                 alt={`Fundo para ${produto.title}`} 
                 fill 
