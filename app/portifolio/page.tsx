@@ -142,7 +142,7 @@ export default function PortfolioPage() {
         {/* Seção de Brindes */}
         <section id="brindes" className="py-16">
           <div className="flex items-center gap-6 mb-12">
-            <h2 className="text-4xl font-bold text-ls-laranja whitespace-nowrap">Brindes Personalizados</h2>
+            <h2 className="text-4xl font-bold text-ls-laranja whitespace-nowrap">Personalizados</h2>
             <div className="w-full h-px bg-white/20"></div>
           </div>
           <ImageGrid items={brindesImages} />
