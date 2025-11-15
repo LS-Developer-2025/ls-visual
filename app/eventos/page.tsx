@@ -118,7 +118,6 @@ export default function EventosPage() {
                 <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${equip.color}`}>{equip.title}</h2>
                 {equip.details.map((detail, detailIndex) => (
                   <div key={detailIndex} className="mb-4 last:mb-0">
-                    {detail.subtitle && <h3 className="text-xl font-semibold text-white mb-1">{detail.subtitle}</h3>}
                     <p className="text-lg text-gray-300">{detail.text}</p>
                   </div>
                 ))}
