@@ -6,8 +6,21 @@ import Image from 'next/image'
 import OrcamentoModal from '../../components/OrcamentoModal'
 import { useState } from 'react'
 
+// --- DEFINIÇÃO DE TIPOS ---
+type EquipmentDetail = {
+  text: string;
+};
+
+type Equipment = {
+  id: string;
+  title: string;
+  image: string;
+  color: string;
+  details: EquipmentDetail[];
+};
+
 // --- DADOS DOS EQUIPAMENTOS ---
-const equipamentos = [
+const equipamentos: Equipment[] = [
   {
     id: 'estrutura',
     title: 'Estrutura Q30',

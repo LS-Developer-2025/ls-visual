@@ -1,12 +1,12 @@
 'use client'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowDown } from 'lucide-react' 
 import Image from 'next/image' 
 import SectionSeparator from '../components/SectionSeparator'
 import SpotlightSeparator from '../components/SpotlightSeparator'
 
-const fadeIn = {
+const fadeIn: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: { 
     opacity: 1, 

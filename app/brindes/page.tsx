@@ -6,8 +6,22 @@ import Image from 'next/image'
 import OrcamentoModal from '../../components/OrcamentoModal'
 import { useState } from 'react'
 
+// --- DEFINIÇÃO DE TIPOS ---
+type ProductDetail = {
+  text: string;
+  subtitle?: string; // A interrogação torna a propriedade opcional
+};
+
+type Product = {
+  id: string;
+  title: string;
+  image: string;
+  color: string;
+  details: ProductDetail[];
+};
+
 // --- DADOS DOS PRODUTOS ---
-const produtos = [
+const produtos: Product[] = [
   {
     id: 'camisetas',
     title: 'Camisetas',
