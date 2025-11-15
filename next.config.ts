@@ -2,6 +2,9 @@
 
 import type { NextConfig } from 'next';
 
+// O nome do seu repositório. O workflow do GitHub Actions usará isso.
+const repoName = 'site-ls';
+
 const nextConfig: NextConfig = {
   // Habilita a exportação estática para o GitHub Pages
   output: 'export',
