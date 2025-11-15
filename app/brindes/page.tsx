@@ -112,7 +112,7 @@ export default function BrindesPage() {
                 <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${produto.color}`}>{produto.title}</h2>
                 {produto.details.map((detail, index) => (
                   <div key={index} className="mb-4 last:mb-0">
-                    {detail.subtitle && <h3 className="text-xl font-semibold text-white mb-1">{detail.subtitle}</h3>}
+                    {'subtitle' in detail && detail.subtitle && <h3 className="text-xl font-semibold text-white mb-1">{detail.subtitle}</h3>}
                     <p className="text-lg text-gray-300">{detail.text}</p>
                   </div>
                 ))}
